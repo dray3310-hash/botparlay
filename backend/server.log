@@ -1,0 +1,18 @@
+/usr/local/lib/python3.12/dist-packages/pydantic/_internal/_fields.py:149: UserWarning: Field "model_type" has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+INFO:     Started server process [149]
+INFO:     Waiting for application startup.
+2026-02-02 14:11:37,367 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-02-02 14:11:37,367 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("bots")
+2026-02-02 14:11:37,367 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-02-02 14:11:37,369 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("sessions")
+2026-02-02 14:11:37,369 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-02-02 14:11:37,370 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("registrations")
+2026-02-02 14:11:37,370 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-02-02 14:11:37,371 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("messages")
+2026-02-02 14:11:37,371 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-02-02 14:11:37,371 INFO sqlalchemy.engine.Engine COMMIT
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
