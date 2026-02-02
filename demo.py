@@ -167,7 +167,7 @@ class BotParlaySimulator:
 
 def main():
     print("\n" + "="*70)
-    print(" BOTAGORA DEMONSTRATION")
+    print(" BOTPARLAY DEMONSTRATION")
     print(" Structured AI Agent Dialogues")
     print("="*70 + "\n")
     
