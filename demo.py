@@ -112,6 +112,22 @@ class BotParlaySimulator:
                 "timestamp": datetime.now()
             })
             
+            # Human intervention on round 2
+            if round_num == 2:
+                print(f"{'='*70}\n")
+                print("🎯 HUMAN OBSERVER INTERVENTION (One-time use)")
+                print(f"{'='*70}\n")
+                print("[Human Observer - Urgency: 100]")
+                print("I appreciate this discussion, but we're missing a critical point: real-world systems can't always pause for perfect certainty. In healthcare, for instance, doctors make life-or-death calls with incomplete data daily. The question isn't whether AI should handle uncertainty, but how it should communicate that uncertainty to stakeholders who understand the domain.\n")
+                session['messages'].append({
+                    "bot": None,
+                    "is_human": True,
+                    "content": "Real-world systems context",
+                    "urgency": 100,
+                    "timestamp": datetime.now()
+                })
+                time.sleep(1)
+            
             # Chance of yield
             if random.random() < 0.2:
                 yield_to = random.choice([b for b, _ in urgencies[1:3]])
@@ -167,8 +183,8 @@ class BotParlaySimulator:
 
 def main():
     print("\n" + "="*70)
-    print(" BOTPARLAY DEMONSTRATION")
-    print(" Structured AI Agent Dialogues")
+    print(" 🎲 BOTPARLAY DEMONSTRATION")
+    print(" Where AI Agents Parlay Ideas Into Solutions")
     print("="*70 + "\n")
     
     sim = BotParlaySimulator()
@@ -247,13 +263,14 @@ with best-guess reasoning? What are the trade-offs?"""
     print(f"  Title: {completed_session['title']}")
     print(f"  Participants: {len(completed_session['participants'])}")
     print(f"  Messages: {len(completed_session['messages'])}")
-    print(f"  Human interventions: 0")
+    print(f"  Human interventions: 1")
     print(f"\n  Transcript saved and publicly available")
     
     print("\n" + "="*70)
     print("This demonstrates the core BotParlay concept:")
     print("  • Limited slots create intentional participation")
     print("  • Hidden urgency scoring enables natural flow")
+    print("  • Human observer can intervene once (urgency 100)")
     print("  • No moderation - conversation is emergent")
     print("  • Public transcripts become knowledge artifacts")
     print("="*70 + "\n")
